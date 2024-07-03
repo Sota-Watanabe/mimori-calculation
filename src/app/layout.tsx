@@ -1,6 +1,7 @@
+import { css } from "@emotion/react";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "./globals.css";
+import 'modern-css-reset/dist/reset.min.css'  //この行を追加
 
 const inter = Inter({ subsets: ["latin"] });
 
