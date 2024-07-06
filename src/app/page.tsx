@@ -2,6 +2,7 @@
 import { css } from "@emotion/react";
 import Image from "next/image";
 import { useState } from "react";
+import { useCalcMimori } from "./use-calc-mimori";
 
 const container = css`
   display: flex;
@@ -46,7 +47,7 @@ const btn = css`
   margin: 8px;
 `;
 
-const result = css`
+const resultStyle = css`
   min-height: 250px;
   background: white;
   border-width: 1px 0px 1px 0px;
@@ -69,8 +70,9 @@ const textCenter = css`
 `;
 
 export default function Home() {
+  const { calcMimori } = useCalcMimori();
   const [value, setValue] = useState(1);
-
+  const [result, setResult] = useState<string>(calcMimori(Number(value)));
   const handleChange = (e: { target: { value: any } }) => {
     const newValue = e.target.value;
     if (newValue >= 0 && newValue <= 1000) {
@@ -88,26 +90,26 @@ export default function Home() {
         <input
           css={form}
           type="number"
-          min={1}
+          min={0}
           max={1000}
           value={value}
           onChange={handleChange}
         />
 
-        <div css={btn}>
+        <div css={btn} onClick={() => setResult(calcMimori(Number(value)))}>
           <img
             src="/実行ボタン.svg"
             alt="実行ボタン"
             style={{ cursor: "pointer" }}
           />
         </div>
-        <div css={result}></div>
+        <div css={resultStyle}>{calcMimori(Number(value))}</div>
         <div css={howToUse}>
           <p>使い方：</p>
           <p>数字を入れて実行押せば三森すずこのできあがり</p>
           <p>1 → 一木さざこ</p>
           <p>3 → 三森すずこ</p>
-          <p>6 → 6森森ただこ</p>
+          <p>6 → 六森森ただこ</p>
         </div>
       </div>
     </div>
