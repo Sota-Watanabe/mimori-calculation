@@ -1,6 +1,5 @@
 "use client";
 import { css } from "@emotion/react";
-import Image from "next/image";
 import { useState } from "react";
 import { useCalcMimori } from "./use-calc-mimori";
 
