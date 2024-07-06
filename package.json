@@ -12,6 +12,7 @@
     "@emotion/react": "^11.11.4",
     "modern-css-reset": "^1.4.0",
     "next": "14.2.4",
+    "next-sitemap": "^4.2.3",
     "react": "^18",
     "react-dom": "^18"
   },
