@@ -23,5 +23,6 @@
     "eslint": "^8",
     "eslint-config-next": "14.2.4",
     "typescript": "^5"
-  }
+  },
+  "homepage": "https://sota-watanabe.github.io/mimori-calculation/"
 }
