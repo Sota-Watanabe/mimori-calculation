@@ -9,7 +9,7 @@ const container = css`
 `;
 
 const main = css`
-  background-image: url("/三森算背景.svg");
+  background-image: url("./三森算背景.svg");
   background-size: cover; /* 画像をコンテナに合わせてサイズ調整 */
   background-repeat: no-repeat; /* 画像を繰り返さない */
   background-position: center; /* 画像を中央に配置 */
@@ -97,7 +97,7 @@ export default function Home() {
 
         <div css={btn} onClick={() => setResult(calcMimori(Number(value)))}>
           <img
-            src="/実行ボタン.svg"
+            src="./実行ボタン.svg"
             alt="実行ボタン"
             style={{ cursor: "pointer" }}
           />
