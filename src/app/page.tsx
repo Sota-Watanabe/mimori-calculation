@@ -105,7 +105,7 @@ export default function Home() {
         <div css={resultStyle}>{calcMimori(Number(value))}</div>
         <div css={howToUse}>
           <p>使い方：</p>
-          <p>数字を入れて実行押せば三森すずこのできあがり</p>
+          <p>数字を入れれば三森すずこのできあがり</p>
           <p>1 → 一木さざこ</p>
           <p>3 → 三森すずこ</p>
           <p>6 → 六森森ただこ</p>
