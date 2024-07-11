@@ -2,6 +2,7 @@
 import { css } from "@emotion/react";
 import { useState } from "react";
 import { useCalcMimori } from "./use-calc-mimori";
+import { GoogleAd } from "./googlead";
 
 const container = css`
   display: flex;
@@ -83,7 +84,9 @@ export default function Home() {
     <div css={container}>
       <div css={main}>
         <h1 css={textCenter}>三森算</h1>
-        {/* <div css={ad}>広告</div> */}
+        <div css={ad}>
+          <GoogleAd />
+        </div>
 
         <h2 css={h2}>何森？</h2>
         <input

@@ -1,7 +1,8 @@
 import { css } from "@emotion/react";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import 'modern-css-reset/dist/reset.min.css'  //この行を追加
+import "modern-css-reset/dist/reset.min.css"; //この行を追加
+import { GoogleAdScript } from "./googleads-script";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,6 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>{children}</body>
+      <GoogleAdScript />
     </html>
   );
 }
