@@ -37,7 +37,7 @@ export const GoogleAd = ({
     <div key={pathname.replace(/\//g, "-") + "-" + SLOT_ID}>
       <ins
         className="adsbygoogle"
-        style={{ display: "block", width: "100%", ...style }}
+        style={{ display: "block", height: "35px", width: "100%", ...style }}
         data-ad-client={`ca-pub-${PUBLISHER_ID}`}
         data-ad-slot={SLOT_ID}
         data-ad-format={format}
