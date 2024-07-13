@@ -25,7 +25,7 @@ const h2 = css`
 
 const ad = css`
   margin: 8px 0;
-  height: 35px !important;
+  height: 280px;
   background: blue;
 `;
 
